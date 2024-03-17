@@ -1,10 +1,17 @@
-# Nathan's nvim setup
-
-Hello, Nathan, it is I...your editor.  I must say that initially I was very
-impressed with your use of vimscript. However, lately, I must conclude that it
-is 2024 and it is time to get with the times.
+# Nathan's dotfiles 
 
 ## Dependencies
+
+```
+* nvim
+* zsh
+```
+
+### Qtile
+
+https://docs.qtile.org/en/latest/manual/install/
+
+### nvim
 
 ```
 * ripgrep (for telescope)
