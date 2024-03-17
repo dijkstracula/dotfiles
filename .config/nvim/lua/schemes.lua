@@ -24,7 +24,7 @@ require("mason").setup({
     }
 })
 require("mason-lspconfig").setup({
-    ensure_installed = { "pyright" }
+    ensure_installed = { "clangd", "pyright" }
 })
 
 local rt = require("rust-tools")
@@ -94,7 +94,7 @@ cmp.setup({
 
 -- Treesitter Plugin Setup 
 require('nvim-treesitter.configs').setup {
-    ensure_installed = { "lua", "python", "rust", "toml" },
+    ensure_installed = { "c", "cpp", "lua", "python", "rust", "toml" },
     auto_install = true,
     highlight = {
         enable = true,
