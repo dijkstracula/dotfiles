@@ -1,0 +1,6 @@
+[user]
+    email = ntaylor@cs.utexas.edu
+    name = Nathan Taylor
+
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
