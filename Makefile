@@ -1,15 +1,19 @@
 ROOT_DIR:=$(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
 
-all: .gitconfig .config/nvim .tmux.conf
+all: gitconfig config/nvim tmux.conf
 
-.PHONY: .gitconfig
-.gitconfig:
-	ln -sf $(ROOT_DIR)/.gitconfig $(HOME)/.gitconfig
+.PHONY: config
+config:
+	mkdir $(HOME)/.config
 
-.PHONY: .config/nvim
-.config/nvim:
-	ln -sf $(ROOT_DIR)/.config/nvim $(HOME)/.config/nvim
+.PHONY: gitconfig
+gitconfig:
+	ln -sf $(ROOT_DIR)/$@ $(HOME)/.$@
 
-.PHONY: .tmux.conf
-.tmux.conf:
-	ln -sf $(ROOT_DIR)/.tmux.conf $(HOME)/.tmux.conf
+.PHONY: config/nvim
+config/nvim: config
+	ln -sf $(ROOT_DIR)/$@ $(HOME)/.$@
+
+.PHONY: tmux.conf
+tmux.conf:
+	ln -sf $(ROOT_DIR)/$@ $(HOME)/.$@
