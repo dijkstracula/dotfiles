@@ -1,6 +1,6 @@
 ROOT_DIR:=$(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
 
-all: gitconfig config/nvim tmux.conf
+all: config/nvim tmux.conf
 
 .PHONY: config
 config:
